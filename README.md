@@ -1,10 +1,10 @@
 # ShowMeOuterSpace
 SBUhacks project 2019!
 Members:
-Shakil Rafi
-Patrick Chan
-Lily Zhong
-Boaz Kaufman
+Shakil Rafi,
+Patrick Chan,
+Lily Zhong,
+Boaz Kaufman, 
 
 Plan:
 Background is the night sky, generate stars
