@@ -48,6 +48,7 @@ body {
 }
 
 .button {
+    cursor: pointer;
     display: inline-block;
     border: none;
     padding: 0.2em;
