@@ -116,6 +116,11 @@ function sendToServer() {
   });
 }
 
+function saveToComputer() {
+  let name = nameInput.value() || "constellation";
+  saveCanvas(name);
+}
+
 /*
  *function saveImageToComputer() {
  *  let constellationName = document.querySelector(".constellation-name");
