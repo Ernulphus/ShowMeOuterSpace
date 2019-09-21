@@ -20,6 +20,13 @@ h1 {
   font-family: Mansalva;
 }
 
+h3 {
+  font-size: 25px;
+  font-style: italic;
+  text-transform: capitalize;
+  padding: 0.75em;
+}
+
 button {
   font-family: Mansalva;
   cursor: pointer
