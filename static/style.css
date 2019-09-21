@@ -2,6 +2,7 @@ body {
   background: #002;
   color: rgb(255, 255, 50);
   font-family: Mansalva;
+  text-transform: lowercase;
 }
 
 .container {
@@ -16,6 +17,10 @@ body {
 
 h1 {
   font-size: 50px;
+  font-family: Mansalva;
+}
+
+button {
   font-family: Mansalva;
 }
 

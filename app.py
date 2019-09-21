@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def landing_page():
-    #return render_template('landing_page')
-    pass
+    return render_template('landing_page')
 
 #route for the page to draw between stars
 @app.route('/draw', methods=['GET'])
@@ -22,5 +21,10 @@ def convert():
 @app.route('/login', methods=['GET'])
 def login():
     return render_template('login.html')
+
+@app.route('/games', methods=['GET'])
+def games():
+    return render_template('games.html')
+
 
 app.run(debug=True)
