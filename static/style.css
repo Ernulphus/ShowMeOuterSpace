@@ -33,7 +33,7 @@ button {
 }
 
 input[type=text] {
-  background-color: #002;
+  background: transparent;
   border: none;
   border-bottom: 1px solid rgb(255, 255, 50);
   color: rgb(255, 255, 50);
@@ -49,17 +49,12 @@ input[type=text] {
 
 }
 
-input[type=text]:hover {
-  background-color: #002;
-}
-
 input[type=text]:focus {
   outline: none;
-  background: #002;
 }
 
 input[type=password] {
-  background-color: #002;
+  background: transparent;
   border: none;
   border-bottom: 1px solid rgb(255, 255, 50);
   color: rgb(255, 255, 50);
