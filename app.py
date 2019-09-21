@@ -30,7 +30,6 @@ def games():
 def draw():
     return flask.render_template('draw.html')
 
-
 #route for the page to turn drawing into stars
 @app.route('/convert', methods=['GET', 'POST'])
 def convert():
