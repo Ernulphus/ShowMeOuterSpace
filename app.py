@@ -1,6 +1,7 @@
 #Backend by Patrick and Boaz wheeee!
 import flask
 import sys
+import base64
 
 
 from lib.security import security
@@ -40,6 +41,12 @@ def convert():
 #route to view saved constellations
 @app.route('/saves', methods=['GET', 'POST'])
 def saves():
+    if flask.request.method == 'POST':
+        imgname = flask.request.form['constellationName']
+        imgstring = flask.request.form['constellationImg']
+        imgdata = base64.b64decode(imgstring)
+        with open('static/img/%s.png' % imgname, 'wb') as f:
+            f.write(imgdata)
     return flask.render_template('saves.html')
 
 def run():
