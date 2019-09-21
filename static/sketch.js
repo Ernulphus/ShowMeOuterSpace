@@ -25,7 +25,7 @@ function setup() {
 }
 
 function draw() {
-  background('#002');
+  smooth();
   stroke(150, 150, 50);
   for (let i in stars) {
     strokeWeight(stars[i].size);
