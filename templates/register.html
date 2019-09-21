@@ -12,17 +12,15 @@
     <div class="container">
       <h1 style='font-size: 60px'>Register</h1>
       <br />
-      <form>
-        <input type='text' name='email'/>
+      <form method="post" action="/register">
+        <input type='text' name='username'/>
         <h2>Email</h2>
         <br />
         <input type='password' name='password'/>
         <h2>Password</h2>
         <br />
-        <input type='password' name='passwordConf'/>
+        <input type='password' name='confirm_password'/>
         <h2>Confirm password</h2>
-        <br />
-        <!-- add code to compare passwords-->
         <br />
         <div class='container'>
           <input type='submit' value='enter' />
