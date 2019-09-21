@@ -12,6 +12,13 @@
     <div class="container">
       <h1 style='font-size: 60px'>Register</h1>
       <br />
+
+      <h3>
+        {% if get_flashed_messages()[0] %}
+         {{ get_flashed_messages()[0] }}
+        {% endif %}
+      </h3>
+
       <form action="/register/" method="post">
         <input type='text' name='username'/>
         <h2>Email</h2>
