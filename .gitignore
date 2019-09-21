@@ -1,2 +1,4 @@
 # Ignore the virtualenv
 we_win
+.DS_Store
+templates/.DS_Store
