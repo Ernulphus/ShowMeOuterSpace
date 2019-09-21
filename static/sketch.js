@@ -1,22 +1,24 @@
 const WIDTH = 800,
       HEIGHT = 540;
-const NUM_STARS = 50;
+const NUM_STARS = 20;
+let canvas = null;
 
 let stars = [];
 
 function setup() {
-  createCanvas(WIDTH, HEIGHT);
+  canvas = createCanvas(WIDTH, HEIGHT);
+  canvas.parent('p5-container');
 
   for (let i = 0; i < NUM_STARS; i++) {
-    stars.push({x: random(WIDTH),
-                y: random(HEIGHT),
+    stars.push({x: random(10, WIDTH - 10),
+                y: random(10, HEIGHT - 10),
                 size: random(5, 10)
                });
   }
 }
 
 function draw() {
-  background(50);
+  background('#002');
 
   stroke(150, 150, 50);
   for (let i in stars) {
