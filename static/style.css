@@ -39,14 +39,23 @@ input[type=text] {
   color: rgb(255, 255, 50);
   font-size: 24px;
   font-family: Mansalva;
+  text-transform: lowercase;
+  padding: 0.5rem 0;
+}
+
+.constellation-name::placeholder {
+  color: darkkhaki;
+  opacity: 0.6;
+
 }
 
 input[type=text]:hover {
-  background-color: #224
+  background-color: #002;
 }
 
 input[type=text]:focus {
   outline: none;
+  background: #002;
 }
 
 input[type=password] {
@@ -86,4 +95,8 @@ button {
   font-size: 24px;
   padding: 5px 10px 5px 10px;
   border-radius: 10px;
+}
+
+.button-save {
+  text-transform: lowercase;
 }

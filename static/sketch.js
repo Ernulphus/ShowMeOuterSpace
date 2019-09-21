@@ -1,4 +1,4 @@
-const WIDTH = 800,
+const WIDTH = 700,
       HEIGHT = 540;
 const NUM_STARS = 20;
 let canvas = null;
@@ -22,12 +22,10 @@ function setup() {
                 size: random(5, 10)
                });
   }
-  
 }
 
 function draw() {
   background('#002');
-
   stroke(150, 150, 50);
   for (let i in stars) {
     strokeWeight(stars[i].size);
@@ -48,19 +46,30 @@ function draw() {
   drawLines();
 }
 
+function isWithinCanvas() {
+  let insideX = (0 <= mouseX && mouseX <= WIDTH);
+  let insideY = (0 <= mouseY && mouseY <= HEIGHT);
+  if (insideX && insideY) {
+    return true;
+  }
+  return false;
+}
+
 function mouseClicked() {
+  console.log(isWithinCanvas());
+  if (!isWithinCanvas()) return;
   if (firstSelectedStar === null) {
     firstSelectedStar = closestStar;
-  firstSelectedArr.push(stars[firstSelectedStar]);
+    firstSelectedArr.push(stars[firstSelectedStar]);
+    // console.log("First : " + firstSelectedStar);
   }
   else {
     secondSelectedStar = closestStar;
     if (firstSelectedStar !== secondSelectedStar) {
       secondSelectedArr.push(stars[secondSelectedStar]);
+      // console.log("First : " + firstSelectedStar);
+      // console.log("Second : " + secondSelectedStar);
       firstSelectedStar = null;
-      console.log(firstSelectedArr);
-      console.log(secondSelectedArr);
-      console.log(closestStar);
     }
     else {
       firstSelectedStar = null;
@@ -78,3 +87,19 @@ function drawLines() {
     line(x1, y1, x2, y2);
   }
 }
+
+function saveImage() {
+  // let constellationName = select(".constellation-name");
+  // save(constellationName);
+  let c = JSON.stringify(canvas);
+  console.log(c);
+}
+
+function setListeners() {
+  // let saveButton = document.querySelector(".button-save");
+  // saveButton.addEventListener("click", saveImage);
+  let saveButton = select(".button-save");
+  saveButton.mousePressed(saveImage);
+}
+
+window.onload = setListeners;
