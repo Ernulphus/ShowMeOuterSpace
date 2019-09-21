@@ -68,7 +68,7 @@ input[type=password] {
 }
 
 input[type=password]:hover {
-  background-color: #224
+  background-color: #002;
 }
 
 input[type=password]:focus {
