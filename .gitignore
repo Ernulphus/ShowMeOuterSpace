@@ -3,3 +3,4 @@ we_win
 .DS_Store
 templates/.DS_Store
 __pycache__/
+static/img
