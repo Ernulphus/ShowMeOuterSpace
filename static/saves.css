@@ -1,0 +1,106 @@
+body {
+  background: linear-gradient(to top, #2B2F77, #070B34);
+  color: rgb(255, 255, 50);
+  font-family: Mansalva;
+  text-transform: lowercase;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > * {
+  padding: 10px;
+}
+
+.grid {
+  display: grid | inline-grid;
+}
+
+h1 {
+  font-size: 50px;
+  font-family: Mansalva;
+}
+
+h3 {
+  font-size: 25px;
+  font-style: italic;
+  text-transform: capitalize;
+  padding: 0.75em;
+}
+
+button {
+  font-family: Mansalva;
+  cursor: pointer
+}
+
+input[type=text] {
+  background-color: #002;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 50);
+  color: rgb(255, 255, 50);
+  font-size: 24px;
+  font-family: Mansalva;
+  text-transform: lowercase;
+  padding: 0.5rem 0;
+}
+
+.constellation-name::placeholder {
+  color: darkkhaki;
+  opacity: 0.6;
+
+}
+
+input[type=text]:hover {
+  background-color: #002;
+}
+
+input[type=text]:focus {
+  outline: none;
+  background: #002;
+}
+
+input[type=password] {
+  background-color: #002;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 50);
+  color: rgb(255, 255, 50);
+  font-size: 24px;
+  font-family: Mansalva;
+}
+
+input[type=password]:hover {
+  background-color: #224
+}
+
+input[type=password]:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: #002;
+  border: 1px solid rgb(255, 255, 50);
+  color: rgb(255, 255, 50);
+  font-size: 24px;
+  font-family: Mansalva;
+  align: center;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+}
+
+button {
+  background-color: rgb(255, 255, 50);
+  border: none;
+  color: #000;
+  font-size: 24px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 10px;
+}
+
+.button-save {
+  text-transform: lowercase;
+}
