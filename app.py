@@ -28,6 +28,7 @@ def games():
 
 #route for the page to draw between stars
 @app.route('/draw', methods=['GET'])
+@security.login_required()
 def draw():
     return flask.render_template('draw.html')
 
