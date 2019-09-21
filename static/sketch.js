@@ -88,18 +88,16 @@ function drawLines() {
   }
 }
 
-function saveImage() {
-  // let constellationName = select(".constellation-name");
-  // save(constellationName);
-  let c = JSON.stringify(canvas);
-  console.log(c);
+function saveImageToComputer() {
+  let constellationName = document.querySelector(".constellation-name");
+  saveCanvas(constellationName.value, 'png');
 }
 
 function setListeners() {
   // let saveButton = document.querySelector(".button-save");
   // saveButton.addEventListener("click", saveImage);
-  let saveButton = select(".button-save");
-  saveButton.mousePressed(saveImage);
+  let saveButton = document.querySelector(".button-save");
+  saveButton.addEventListener("click", saveImageToComputer);
 }
 
 window.onload = setListeners;
