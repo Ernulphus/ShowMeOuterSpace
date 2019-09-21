@@ -1,7 +1,7 @@
 body {
   background: #002;
   color: rgb(255, 255, 50);
-  font-family: Open Sans;
+  font-family: Mansalva;
 }
 
 .container {
@@ -16,6 +16,7 @@ body {
 
 h1 {
   font-size: 50px;
+  font-family: Mansalva;
 }
 
 input[type=text] {
@@ -24,11 +25,41 @@ input[type=text] {
   border-bottom: 1px solid rgb(255, 255, 50);
   color: rgb(255, 255, 50);
   font-size: 24px;
-  font-family: Open Sans;
+  font-family: Mansalva;
+}
+
+input[type=text]:hover {
+  background-color: #224
 }
 
 input[type=text]:focus {
   outline: none;
+}
+
+input[type=password] {
+  background-color: #002;
+  border: none;
+  border-bottom: 1px solid rgb(255, 255, 50);
+  color: rgb(255, 255, 50);
+  font-size: 24px;
+  font-family: Mansalva;
+}
+
+input[type=password]:hover {
+  background-color: #224
+}
+
+input[type=password]:focus {
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: #002;
+  border: 1px solid rgb(255, 255, 50);
+  color: rgb(255, 255, 50);
+  font-size: 24px;
+  font-family: Mansalva;
+  align: center;
 }
 
 button {
