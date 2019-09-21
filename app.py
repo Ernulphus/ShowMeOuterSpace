@@ -6,6 +6,7 @@ import base64
 
 from lib.security import security
 from lib.views import public
+from lib.saves.saves import save_image, get_all_images
 
 
 app = flask.Flask(__name__)
@@ -43,12 +44,15 @@ def convert():
 @app.route('/saves', methods=['GET', 'POST'])
 def saves():
     if flask.request.method == 'POST':
+        username = flask.session.get('username')
         imgname = flask.request.form['constellationName']
         imgstring = flask.request.form['constellationImg']
         imgdata = base64.b64decode(imgstring)
-        with open('static/img/%s.png' % imgname, 'wb') as f:
+        image_counter = save_image(username, imgname)
+        with open('static/img/%d.png' % image_counter, 'wb') as f:
             f.write(imgdata)
-    return flask.render_template('saves.html', constellations=[])
+    constellations = get_all_images()
+    return flask.render_template('saves.html', constellations=constellations)
 
 def run():
     app.run(debug=True)

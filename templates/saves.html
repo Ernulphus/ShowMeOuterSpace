@@ -8,17 +8,30 @@
     <link rel="stylesheet" type="text/css" href="../static/style.css">
     <meta charset="utf-8" />
 
+    <style>
+      body {
+        background-color: #002;
+      }
+
+      .constellation {
+        border: 1px solid white;
+        height: 300px;
+      }
+    </style>
+
   </head>
-  <body style="width: 100vw; height: 100vh";>
+  <body>
     <div class="container">
       <h1>
         Saved constellations
       </h1>
+      {% for img in constellations %}
+      <div>
+        <img src="/static/img/{{img['index']}}.png" alt="constellation" class="constellation" />
+        <h3>{{img['name']}} by {{img['username']}} </h3>
+      </div>
+      {% endfor %}
     </div>
-    {% for img in constellations %}
-      <div><img src="{{img}}" alt="constellation" /><br /></div>
-    {% endfor %}
-
   </body>
 
 </html>
