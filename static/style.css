@@ -1,8 +1,23 @@
-body {
+*, *:before, *:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+  min-width: 100vw;
   background: linear-gradient(to top, #2B2F77, #070B34);
   color: rgb(255, 255, 50);
   font-family: Mansalva;
-  text-transform: lowercase;
+  text-transform: lowercase`;
+  background-size: stretch !important;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+	padding: 0;
+	margin:0;
 }
 
 .container {
@@ -40,7 +55,11 @@ input[type=text] {
   font-size: 24px;
   font-family: Mansalva;
   text-transform: lowercase;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.constellation-name {
+	margin: 0 1rem;
 }
 
 .constellation-name::placeholder {
@@ -63,7 +82,7 @@ input[type=password] {
 }
 
 input[type=password]:hover {
-  background-color: #224
+  background-color: #002;
 }
 
 input[type=password]:focus {
@@ -95,3 +114,5 @@ button {
 .button-save {
   text-transform: lowercase;
 }
+
+

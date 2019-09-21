@@ -17,6 +17,8 @@ body {
 
 .grid {
   display: grid | inline-grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
 }
 
 h1 {
