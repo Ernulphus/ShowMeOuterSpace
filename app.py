@@ -47,7 +47,7 @@ def saves():
         imgdata = base64.b64decode(imgstring)
         with open('static/img/%s.png' % imgname, 'wb') as f:
             f.write(imgdata)
-    return flask.render_template('saves.html')
+    return flask.render_template('saves.html', constellations=[])
 
 def run():
     app.run(debug=True)

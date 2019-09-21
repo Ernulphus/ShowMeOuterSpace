@@ -15,8 +15,8 @@
         Saved constellations
       </h1>
     </div>
-    {% for var in request.files()%}
-      <div><img src="{{var}}" alt="constellation" /><br /></div>
+    {% for img in constellations %}
+      <div><img src="{{img}}" alt="constellation" /><br /></div>
     {% endfor %}
 
   </body>
