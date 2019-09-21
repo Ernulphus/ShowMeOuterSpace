@@ -1,0 +1,87 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background: linear-gradient(to top, #2B2F77, #070B34);
+    font-family: "Mansalva", cursive;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 5rem auto;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 50);
+    text-shadow: 2px 2px rgba(61,30,91, 0.8);
+}
+
+.title {
+    text-transform: lowercase;
+    text-align: center;
+    letter-spacing: 2px;
+
+}
+
+.title-sm {
+    font-size: 5rem;
+}
+
+.title-lg {
+    font-size: 6.5rem;
+}
+
+.button-container {
+    text-align: center;
+    background: transparent;
+}
+
+.button {
+    display: inline-block;
+    border: none;
+    padding: 0.2em;
+    margin: 0 0.5rem;
+    background:transparent;
+    height: 70px;
+}
+
+.button-link {
+    text-decoration: none;
+    background:transparent;
+    color: white;
+    font-family: "Itim", cursive;
+    font-size: 1.5rem;
+    border-radius: 100px;
+    padding: 1rem;
+    text-transform: capitalize;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.button-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    transform-origin: center;
+    transform: scale(0);
+    transition: transform 300ms ease-in;
+    background: rgb(255, 255, 50);
+}
+
+.button-link:hover::after {
+    background: rgb(255, 255, 50);
+    transform: scale(1);
+}
