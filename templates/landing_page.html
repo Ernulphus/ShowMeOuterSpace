@@ -15,6 +15,16 @@
                 <span class="title title-lg">Outer Space!</span>
             </h1>
         </div>
+
+        {% if is_logged_in %}
+        <div class="button-container">
+          <button class="button button-login">
+            <a href="/draw" class="button-link">Draw</a>
+          </button>
+        </div>
+        {% endif %}
+
+        {% if not is_logged_in %}
         <div class="button-container">
             <button class="button button-login">
                 <a href="/login" class="button-link">Login</a>
@@ -23,6 +33,7 @@
                 <a href="/register" class="button-link">Register</a>
             </button>
         </div>
+        {% endif %}
     </div>
 </body>
 </html>
