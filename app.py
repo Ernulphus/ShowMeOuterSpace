@@ -20,4 +20,4 @@ def convert():
 #route for the login page
 @app.route('/login', methods=['GET','POST'])
 def login():
-    pass
+    return render_template('login.html')
